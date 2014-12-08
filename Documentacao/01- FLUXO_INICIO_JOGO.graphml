@@ -328,7 +328,7 @@ IDs gerados, preenchimento de nome, serie, etc.<y:LabelModel>
           <data key="d6">
             <y:GenericNode configuration="com.yworks.flowchart.process">
               <y:Geometry height="30.0" width="80.0" x="230.0" y="195.0"/>
-              <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
+              <y:Fill color="#E8EEF7" color2="#CC99FF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="64.046875" x="7.9765625" y="5.6494140625">Load game<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>

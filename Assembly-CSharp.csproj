@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{27E3B7BB-7210-4DB8-2CDE-8C5F9221D3B6}</ProjectGuid>
+	<ProjectGuid>{6ABB20AD-27A7-A5EB-F317-55EE9726A244}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;CROSS_PLATFORM_INPUT</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_3;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,46 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Sample Assets\2D\Scripts\Camera2DFollow.cs" />
-     <Compile Include="Assets\Sample Assets\2D\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Sample Assets\2D\Scripts\Platformer2DUserControl.cs" />
-     <Compile Include="Assets\Sample Assets\2D\Scripts\PlatformerCharacter2D.cs" />
-     <Compile Include="Assets\Sample Assets\2D\Scripts\Restarter.cs" />
-     <Compile Include="Assets\Sample Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
-     <Compile Include="Assets\Sample Assets\Cameras\Scripts\AutoCam.cs" />
-     <Compile Include="Assets\Sample Assets\Cameras\Scripts\FreeLookCam.cs" />
-     <Compile Include="Assets\Sample Assets\Cameras\Scripts\HandHeldCam.cs" />
-     <Compile Include="Assets\Sample Assets\Cameras\Scripts\LookatTarget.cs" />
-     <Compile Include="Assets\Sample Assets\Cameras\Scripts\PivotBasedCameraRig.cs" />
-     <Compile Include="Assets\Sample Assets\Cameras\Scripts\ProtectCameraFromWallClip.cs" />
-     <Compile Include="Assets\Sample Assets\Cameras\Scripts\TargetFieldOfView.cs" />
-     <Compile Include="Assets\Sample Assets\Characters\First Person Character\Scripts\FirstPersonCharacter.cs" />
-     <Compile Include="Assets\Sample Assets\Characters\First Person Character\Scripts\FirstPersonHeadBob.cs" />
-     <Compile Include="Assets\Sample Assets\Characters\Third Person Character\Scripts\AICharacterControl.cs" />
-     <Compile Include="Assets\Sample Assets\Characters\Third Person Character\Scripts\ThirdPersonCharacter.cs" />
-     <Compile Include="Assets\Sample Assets\Characters\Third Person Character\Scripts\ThirdPersonUserControl.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\AbstractButton.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\AxisTouchButton.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\Button.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\ButtonDownTextureChange.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\ButtonFactory.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\CrossPlatformInput.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\Joystick.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\JoystickAbstract.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\MobileControlRig.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\PlatformSpecific\MobileInput.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\PlatformSpecific\StandaloneInput.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\TiltInput.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\TouchJoystick.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\TouchPad.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\TouchPadPositional.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\TouchPadRelativePositional.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\TouchPadSwipe.cs" />
-     <Compile Include="Assets\Sample Assets\Cross Platform Input\Scripts\VirtualInput.cs" />
-     <None Include="Assets\Sample Assets\Cross Platform Input\Cross Platform Input Guidelines.txt" />
-     <None Include="Assets\Sample Assets\Characters\Third Person Character\Third Person Character Guidelines.txt" />
-     <None Include="Assets\Sample Assets\Cameras\Camera Guidelines.txt" />
-     <None Include="Assets\Sample Assets\Characters\First Person Character\First Person Character Guidelines.txt" />
+     <Compile Include="Assets\Scripts\Character\Platformer2DUserControl.cs" />
+     <Compile Include="Assets\Scripts\Character\PlatformerCharacter2D.cs" />
+     <Compile Include="Assets\Scripts\Objects\DeadTreeTrigger.cs" />
+     <Compile Include="Assets\Scripts\Objects\Rope.cs" />
+     <Compile Include="Assets\Third-part\Spooky Woods\Example\Scripts\BackgroundParallax.cs" />
+     <Compile Include="Assets\Third-part\TinyBackground2D\Scripts\Move.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{5BC63127-D251-EE4A-3B7A-2F10B57DE5F8}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{0D0E4D09-A890-3950-CA94-DBD3C27987A9}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Objects\Rope.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Objects\Rope.cs" Line="122" Column="4" />
+      <File FileName="Assets\Scripts\Character\PlatformerCharacter2D.cs" Line="39" Column="64" />
+      <File FileName="Assets\Scripts\Character\Platformer2DUserControl.cs" Line="27" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

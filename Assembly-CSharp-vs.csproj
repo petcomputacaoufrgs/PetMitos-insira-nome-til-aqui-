@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{6ABB20AD-27A7-A5EB-F317-55EE9726A244}</ProjectGuid>
+	<ProjectGuid>{4BC0BA14-07E3-8E9B-2EC0-B3E7130ED558}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -48,17 +48,19 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Character\Platformer2DUserControl.cs" />
      <Compile Include="Assets\Scripts\Character\PlatformerCharacter2D.cs" />
+     <Compile Include="Assets\Scripts\Objects\BoitataSpinningBody.cs" />
+     <Compile Include="Assets\Scripts\Objects\CandleCompass.cs" />
      <Compile Include="Assets\Scripts\Objects\DeadTreeTrigger.cs" />
      <Compile Include="Assets\Scripts\Objects\Rope.cs" />
      <Compile Include="Assets\Third-part\Spooky Woods\Example\Scripts\BackgroundParallax.cs" />
      <Compile Include="Assets\Third-part\TinyBackground2D\Scripts\Move.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>D:/Projetos/Unity/PetMitos3/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>D:/Projetos/Unity/PetMitosUFRGS/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{5BC63127-D251-EE4A-3B7A-2F10B57DE5F8}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{283752EE-F817-1F6F-319B-FF1C8C0050A4}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

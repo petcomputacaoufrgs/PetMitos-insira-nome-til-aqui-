@@ -37,7 +37,12 @@ public class DeadTreeTrigger : MonoBehaviour {
 
 		if(isAttached){
 			isAttached = false;
-			detachPiece.AddComponent<Rigidbody2D>();
+			//Rigidbody2D rigid = new Rigidbody2D();
+			//rigid.fixedAngle = true;
+
+			Rigidbody2D rigid = detachPiece.AddComponent<Rigidbody2D>();
+			rigid.fixedAngle = true;
+
 			Debug.Log("Ativou");
 		}
 

@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Objects\CandleCompass.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Objects\CandleCompass.cs" Line="60" Column="50" />
+      <File FileName="Assets\Scripts\Objects\BoitataSpinningBody.cs" Line="19" Column="24" />
+      <File FileName="Assets\Scripts\Objects\Rope.cs" Line="131" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

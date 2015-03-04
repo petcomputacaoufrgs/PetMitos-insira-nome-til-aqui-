@@ -17,7 +17,11 @@ public class PlatformerCharacter2D : MonoBehaviour
 	Transform groundCheck;								// A position marking where to check if the player is grounded.
 	float groundedRadius = .2f;							// Radius of the overlap circle to determine if grounded
 	bool grounded = false;								// Whether or not the player is grounded.
-	bool onRope = false;								// Whether or not the player is grounded.
+	bool onRope = false;			
+	bool montaria = false;// Whether or not the player is grounded.
+
+	public bool montado = false;
+
 	Transform ceilingCheck;								// A position marking where to check for ceilings
 	float ceilingRadius = .01f;							// Radius of the overlap circle to determine if the player can stand up
 	Animator anim;										// Reference to the player's animator component.
@@ -29,6 +33,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 		groundCheck = transform.Find("GroundCheck");
 		ceilingCheck = transform.Find("CeilingCheck");
 		anim = GetComponent<Animator>();
+
 	}
 
 
@@ -43,6 +48,8 @@ public class PlatformerCharacter2D : MonoBehaviour
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
 		anim.SetBool("Ground", grounded);
+
+		anim.SetBool ("montado", montaria);
 
 		// Set the vertical animation
 		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
@@ -91,7 +98,19 @@ public class PlatformerCharacter2D : MonoBehaviour
             // Add a vertical force to the player.
             anim.SetBool("Ground", false);
             rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+
         }
+		if(montaria == true){
+			if (Input.GetKey(KeyCode.UpArrow))		//desmontar apertando up & jump
+			{
+				if (Input.GetKeyDown(KeyCode.Space))
+				{
+					montaria = false;
+
+
+				}
+			}
+		}
 	}
 
 	
@@ -105,4 +124,37 @@ public class PlatformerCharacter2D : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+	void OnCollisionEnter2D(Collision2D collision){
+	    if (collision.gameObject.tag=="mount") {
+
+
+
+			collision.gameObject.transform.SetParent(gameObject.transform, true);
+			montado = true;
+
+
+		
+
+
+
+
+
+		}
+
+		
+	}
+	void	OnCollisionStay2D(Collision2D coll) {
+		if(coll.gameObject.tag == "BOX"){
+			if (Input.GetKey (KeyCode.LeftControl)) {
+				coll.gameObject.rigidbody2D.mass = 8;
+			} 
+				else {
+				coll.gameObject.rigidbody2D.mass = 1000;
+			}
+		}
+
+	}
+
 }
+

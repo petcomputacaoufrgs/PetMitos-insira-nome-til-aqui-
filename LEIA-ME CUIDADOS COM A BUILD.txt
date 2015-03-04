@@ -9,3 +9,9 @@ CUIDADOS SQLITE
 	Other settings -> Optimization -> Api Compatibility Level -> .NET 2.0
 - Há várias versões de sqlite3.dll na internet. A que está sendo usada no projeto funciona apenas para builds para Windows_x86.
 - Não irá funcionar para build Windows_x86_x64. Não foi localizada ainda uma dll funcional para este caso.
+- Links que ajudaram a solucionar o problema:
+	http://www.echo17.com/forum/index.php?topic=440.0
+	http://answers.unity3d.com/questions/606854/fallback-handler-could-not-load-library.html
+	http://answers.unity3d.com/questions/485085/dll-is-not-allowed-to-be-included-or-could-not-be.html (importante)
+	https://github.com/PangeranWiguan/W.G.-Unity3D-SQLite (versão funcional adaptada deste projeto)
+	http://answers.unity3d.com/questions/743400/database-sqlite-setup-for-unity.html (Database (SQLite) Setup for Unity)

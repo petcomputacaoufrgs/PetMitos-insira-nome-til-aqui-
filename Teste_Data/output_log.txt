@@ -1,0 +1,44 @@
+Initialize engine version: 4.5.3f3 (fca41a4fabea)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 850M  (ID=0x1391)
+    Vendor:   NVIDIA
+    VRAM:     1972 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\Mono.Data.Sqlite.dll (this message is harmless)
+Loading D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\Mono.Data.Sqlite.dll into Unity Child Domain
+Platform assembly: D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\System.Data.dll (this message is harmless)
+Loading D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\System.Data.dll into Unity Child Domain
+- Completed reload, in  0.055 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\System.Transactions.dll (this message is harmless)
+Platform assembly: D:\Projetos\Unity\PetMitosUFRGS\Teste_Data\Managed\System.Xml.dll (this message is harmless)
+URI=file:./Assets/DB/local-DB-folclorica-01.sqlite3
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+DBAccess:Connect() (at D:\Projetos\Unity\PetMitosUFRGS\Assets\Scripts\DB\DBAccess.cs:20)
+FitComponentsScreen:OnGUI() (at D:\Projetos\Unity\PetMitosUFRGS\Assets\Scripts\UI\Title Screen\FitComponentsScreen.cs:61)
+ 
+(Filename: D Line: 0)
+
+ID: leofilipe carvalho
+ID: leofilipe SENHA: carvalho
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+DBAccess:Connect() (at D:\Projetos\Unity\PetMitosUFRGS\Assets\Scripts\DB\DBAccess.cs:40)
+FitComponentsScreen:OnGUI() (at D:\Projetos\Unity\PetMitosUFRGS\Assets\Scripts\UI\Title Screen\FitComponentsScreen.cs:61)
+ 
+(Filename: D Line: 0)
+

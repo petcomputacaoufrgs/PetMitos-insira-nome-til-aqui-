@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Objects\CandleCompass.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DB\DBAccess.cs">
     <Files>
-      <File FileName="Assets\Scripts\Objects\CandleCompass.cs" Line="60" Column="50" />
-      <File FileName="Assets\Scripts\Objects\BoitataSpinningBody.cs" Line="19" Column="24" />
-      <File FileName="Assets\Scripts\Objects\Rope.cs" Line="131" Column="2" />
+      <File FileName="Assets\Scripts\DB\DBAccess.cs" Line="40" Column="38" />
+      <File FileName="Assets\Scripts\UI\Title Screen\FitComponentsScreen.cs" Line="61" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

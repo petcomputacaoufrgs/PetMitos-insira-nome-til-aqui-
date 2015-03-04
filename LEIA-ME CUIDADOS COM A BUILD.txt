@@ -1,0 +1,11 @@
+CUIDADOS SQLITE
+- O arquivo sqlite3.dll gera erro de licença no editor ao ser executado dentro da unity. Isto não interfere com o funcionamento, é apenas irritante.
+- Para para o erro, remova o arquivo sqlite3.dll de Assets/Plugins e o coloque na raiz do projeto.
+- Ao gerar a build, para que a mesma funcione, o arquivo deve constar na pasta de plugins (build de desenvolvimento: <nome_exe>_Data\Plugins).
+- Caso a dll tenha sido removida da pasta antes de gerar a build a mesma deverá ser incluída manualmente no local acima indicado.
+- É necessária também a seguinte alteração:
+	File -> Build Settings -> Player Settings -> 
+	Settings for PC, Mac & Linux Standalone -> 
+	Other settings -> Optimization -> Api Compatibility Level -> .NET 2.0
+- Há várias versões de sqlite3.dll na internet. A que está sendo usada no projeto funciona apenas para builds para Windows_x86.
+- Não irá funcionar para build Windows_x86_x64. Não foi localizada ainda uma dll funcional para este caso.

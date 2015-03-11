@@ -1,17 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="assets\Scripts\Character\PlatformerCharacter2D.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\pet\Documents\PetMitos\assets\Scripts\Objects\BoitataSpinningBody.cs">
     <Files>
-      <File FileName="assets\Scripts\Character\Platformer2DUserControl.cs" Line="39" Column="19" />
-      <File FileName="assets\Scripts\Character\controlboi.cs" Line="4" Column="38" />
-      <File FileName="assets\Scripts\Character\PlatformerCharacter2D.cs" Line="38" Column="2" />
-      <File FileName="assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="1" Column="1" />
+      <File FileName="assets\Scripts\Character\controlboi.cs" Line="62" Column="5" />
+      <File FileName="assets\Scripts\Character\PlatformerCharacter2D.cs" Line="15" Column="29" />
+      <File FileName="assets\Scripts\Character\Platformer2DUserControl.cs" Line="44" Column="4" />
+      <File FileName="c:\Users\pet\Documents\PetMitos\assets\Scripts\Objects\BoitataSpinningBody.cs" Line="11" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True" selected="True" />
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -26,22 +26,26 @@ public class Platformer2DUserControl : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if(!character.montado){
+		if (!character.montaria) {
 			// Read the inputs.
-			bool crouch = Input.GetKey(KeyCode.LeftControl);
+			bool crouch = Input.GetKey (KeyCode.LeftControl);
 			#if CROSS_PLATFORM_INPUT
 			float h = CrossPlatformInput.GetAxis("Horizontal");
 			#else
-			float h = Input.GetAxis("Horizontal");
+			float h = Input.GetAxis ("Horizontal");
 			#endif
 
 			// Pass all parameters to the character control script.
-			character.Move( h, crouch , jump );
+			character.Move (h, crouch, jump);
 
-	        // Reset the jump input once it has been used.
-		    jump = false;
+			// Reset the jump input once it has been used.
+			jump = false;
+		} else {
+
+			character.Move(GetComponentInChildren<controlboi>().speed,false,false);
 		}
 
 	}
+
 
 }

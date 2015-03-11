@@ -2,7 +2,7 @@
 
 public class PlatformerCharacter2D : MonoBehaviour 
 {
-	bool facingRight = true;							// For determining which way the player is currently facing.
+	public bool facingRight = true;							// For determining which way the player is currently facing.
 
 	[SerializeField] float maxSpeed = 10f;				// The fastest the player can travel in the x axis.
 	[SerializeField] float jumpForce = 400f;			// Amount of force added when the player jumps.	
@@ -18,9 +18,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 	float groundedRadius = .2f;							// Radius of the overlap circle to determine if grounded
 	bool grounded = false;								// Whether or not the player is grounded.
 	bool onRope = false;			
-	bool montaria = false;// Whether or not the player is grounded.
+	public bool montaria = false;// Whether or not the player is grounded.
 
-	public bool montado = false;
+
 
 	Transform ceilingCheck;								// A position marking where to check for ceilings
 	float ceilingRadius = .01f;							// Radius of the overlap circle to determine if the player can stand up
@@ -84,13 +84,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 			rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
 			
 			// If the input is moving the player right and the player is facing left...
-			if(move > 0 && !facingRight)
-				// ... flip the player.
-				Flip();
-			// Otherwise if the input is moving the player left and the player is facing right...
-			else if(move < 0 && facingRight)
-				// ... flip the player.
-				Flip();
+			callFlip(move);
 		}
 
         // If the player should jump...
@@ -113,8 +107,18 @@ public class PlatformerCharacter2D : MonoBehaviour
 		}
 	}
 
+	public void callFlip(float move){
+		if(move > 0 && !facingRight)
+			// ... flip the player.
+			Flip();
+		// Otherwise if the input is moving the player left and the player is facing right...
+		else if(move < 0 && facingRight)
+			// ... flip the player.
+			Flip();
+	}
+
 	
-	void Flip ()
+	public void Flip ()
 	{
 		// Switch the way the player is labelled as facing.
 		facingRight = !facingRight;
@@ -129,9 +133,16 @@ public class PlatformerCharacter2D : MonoBehaviour
 	    if (collision.gameObject.tag=="mount") {
 
 
+			collision.gameObject.GetComponent<HingeJoint2D>().enabled = true;
 
 			collision.gameObject.transform.SetParent(gameObject.transform, true);
-			montado = true;
+
+			collision.gameObject.GetComponent<controlboi>().montado = true;
+
+
+			collision.gameObject.GetComponent<controlboi>().mounttrigger = true;
+
+			montaria = true;
 
 
 		

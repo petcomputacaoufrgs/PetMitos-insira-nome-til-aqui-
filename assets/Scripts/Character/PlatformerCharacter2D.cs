@@ -132,6 +132,11 @@ public class PlatformerCharacter2D : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D collision){
 	    if (collision.gameObject.tag=="mount") {
 
+			if(facingRight != collision.gameObject.GetComponent<controlboi>().faceright){
+				Flip();
+			}
+
+
 
 			collision.gameObject.GetComponent<HingeJoint2D>().enabled = true;
 
@@ -140,7 +145,8 @@ public class PlatformerCharacter2D : MonoBehaviour
 			collision.gameObject.GetComponent<controlboi>().montado = true;
 
 
-			collision.gameObject.GetComponent<controlboi>().mounttrigger = true;
+
+
 
 			montaria = true;
 

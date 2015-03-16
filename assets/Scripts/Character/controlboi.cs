@@ -9,8 +9,10 @@ public class controlboi:MonoBehaviour {
 	[SerializeField] float jumpForce = 500f;			// Amount of force added when the player jumps.	
 
 	public Transform Groundcheck;
-	public float GroundcheckRadius;
+	public float 	 GroundcheckRadius= 0.2f;
+	public LayerMask whatisground;
 	private bool grounded;
+
 
 
 	public bool faceright = false;		
@@ -21,10 +23,10 @@ public class controlboi:MonoBehaviour {
 
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
+	void FixedUpdate (){
+
+		grounded = Physics2D.OverlapCircle(Groundcheck.position, GroundcheckRadius, whatisground);
 
 		if(montado)
 		{
@@ -32,8 +34,16 @@ public class controlboi:MonoBehaviour {
 			speed = Input.GetAxis("Horizontal");
 			Move(speed,false,jump);
 			jump = false;
-
+			
 		}
+
+	}
+	
+	// Update is called once per frame
+	void Update () {
+
+
+
 
 
 
@@ -46,10 +56,10 @@ public class controlboi:MonoBehaviour {
 	{
 		
 
-
-			if (!montado || mounttrigger ) {
+		rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
+			if (mounttrigger ) {
 				// Move the character
-				rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
+				
 			
 				// If the input is moving the player right and the player is facing left...
 				if (move > 0 && !faceright)
@@ -63,7 +73,7 @@ public class controlboi:MonoBehaviour {
 		}
 		
 		// If the player should jump...
-		if (jump) {
+		if (jump && grounded) {
 			// Add a vertical force to the player.
 
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
@@ -76,6 +86,7 @@ public class controlboi:MonoBehaviour {
 	{
 		// Switch the way the player is labelled as facing.
 		faceright = !faceright;
+		transform.parent.GetComponent<PlatformerCharacter2D> ().facingRight = faceright;
 		
 		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;

@@ -41,8 +41,8 @@ public class Platformer2DUserControl : MonoBehaviour
 			// Reset the jump input once it has been used.
 			jump = false;
 		} else {
-
-			character.Move(GetComponentInChildren<controlboi>().speed,false,false);
+			character.callFlip(GetComponentInChildren<controlboi>().speed);
+			//character.Move(GetComponentInChildren<controlboi>().speed,false,false);
 		}
 
 	}

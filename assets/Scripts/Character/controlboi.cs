@@ -30,6 +30,18 @@ public class controlboi:MonoBehaviour {
 
 		if(montado)
 		{
+			if(Input.GetKey(KeyCode.UpArrow)){
+				if(Input.GetKeyDown(KeyCode.UpArrow)){
+					montado = false;
+					transform.parent.GetComponent<PlatformerCharacter2D>().montaria = false;
+					GetComponent<HingeJoint2D>().enabled = false;
+					GetComponent<PolygonCollider2D>().enabled =false;
+					transform.parent = GameObject.Find("MOBs").transform;
+					StartCoroutine(MyCoroutine());
+				}
+			}
+
+
 			if (Input.GetButtonDown("Jump")) jump = true;
 			speed = Input.GetAxis("Horizontal");
 			Move(speed,false,jump);
@@ -92,6 +104,13 @@ public class controlboi:MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	IEnumerator MyCoroutine()
+	{
+		Physics2D.IgnoreLayerCollision (10, 11, true);
+		yield return new WaitForSeconds(1F);
+		Physics2D.IgnoreLayerCollision (10, 11, false);
 	}
 
 

@@ -68,7 +68,7 @@ public class controlboi:MonoBehaviour {
 	{
 		
 
-		rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
+		GetComponent<Rigidbody2D>().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			if (mounttrigger ) {
 				// Move the character
 				
@@ -88,7 +88,7 @@ public class controlboi:MonoBehaviour {
 		if (jump && grounded) {
 			// Add a vertical force to the player.
 
-			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
 			
 		}
 

@@ -52,7 +52,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 		anim.SetBool ("montado", montaria);
 
 		// Set the vertical animation
-		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+		anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
 	}
 
 
@@ -81,7 +81,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 			anim.SetFloat("Speed", Mathf.Abs(move));
 
 			// Move the character
-			rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			
 			// If the input is moving the player right and the player is facing left...
 			callFlip(move);
@@ -91,7 +91,7 @@ public class PlatformerCharacter2D : MonoBehaviour
         if (grounded && jump) {
             // Add a vertical force to the player.
             anim.SetBool("Ground", false);
-            rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
 
         }
 		if(montaria == true){
@@ -164,10 +164,10 @@ public class PlatformerCharacter2D : MonoBehaviour
 	void	OnCollisionStay2D(Collision2D coll) {
 		if(coll.gameObject.tag == "BOX"){
 			if (Input.GetKey (KeyCode.LeftControl)) {
-				coll.gameObject.rigidbody2D.mass = 8;
+				coll.gameObject.GetComponent<Rigidbody2D>().mass = 8;
 			} 
 				else {
-				coll.gameObject.rigidbody2D.mass = 1000;
+				coll.gameObject.GetComponent<Rigidbody2D>().mass = 1000;
 			}
 		}
 

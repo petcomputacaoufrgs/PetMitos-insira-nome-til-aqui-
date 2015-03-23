@@ -1,11 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\pet\Documents\PetMitos\assets\Scripts\Objects\BoitataSpinningBody.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="assets\Scripts\SaveLoad.cs">
     <Files>
-      <File FileName="assets\Scripts\Character\controlboi.cs" Line="62" Column="5" />
-      <File FileName="assets\Scripts\Character\PlatformerCharacter2D.cs" Line="15" Column="29" />
-      <File FileName="assets\Scripts\Character\Platformer2DUserControl.cs" Line="44" Column="4" />
-      <File FileName="c:\Users\pet\Documents\PetMitos\assets\Scripts\Objects\BoitataSpinningBody.cs" Line="11" Column="7" />
+      <File FileName="assets\Scripts\SaveLoad.cs" Line="26" Column="2" />
+      <File FileName="assets\Scripts\GameController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

@@ -49,12 +49,16 @@
      <Compile Include="assets\Scripts\Character\Platformer2DUserControl.cs" />
      <Compile Include="assets\Scripts\Character\PlatformerCharacter2D.cs" />
      <Compile Include="assets\Scripts\Character\controlboi.cs" />
+     <Compile Include="assets\Scripts\Checkpoint.cs" />
+     <Compile Include="assets\Scripts\Game.cs" />
      <Compile Include="assets\Scripts\GameController.cs" />
      <Compile Include="assets\Scripts\Objects\BoitataSpinningBody.cs" />
      <Compile Include="assets\Scripts\Objects\CandleCompass.cs" />
      <Compile Include="assets\Scripts\Objects\DeadTreeTrigger.cs" />
      <Compile Include="assets\Scripts\Objects\Rope.cs" />
+     <Compile Include="assets\Scripts\PorcoMovimentoTeste.cs" />
      <Compile Include="assets\Scripts\SaveLoad.cs" />
+     <Compile Include="assets\Scripts\Saveable.cs" />
      <Compile Include="assets\Third-part\Spooky Woods\Example\Scripts\BackgroundParallax.cs" />
      <Compile Include="assets\Third-part\TinyBackground2D\Scripts\Move.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">

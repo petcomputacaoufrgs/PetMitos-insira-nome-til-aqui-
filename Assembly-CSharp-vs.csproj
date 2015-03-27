@@ -57,10 +57,11 @@
      <Compile Include="assets\Scripts\Objects\DeadTreeTrigger.cs" />
      <Compile Include="assets\Scripts\Objects\Rope.cs" />
      <Compile Include="assets\Scripts\PorcoMovimentoTeste.cs" />
-     <Compile Include="assets\Scripts\SaveLoad.cs" />
-     <Compile Include="assets\Scripts\Saveable.cs" />
-     <Compile Include="assets\Third-part\Spooky Woods\Example\Scripts\BackgroundParallax.cs" />
-     <Compile Include="assets\Third-part\TinyBackground2D\Scripts\Move.cs" />
+     <Compile Include="assets\Scripts\SaveLoad\SaveLoad.cs" />
+     <Compile Include="assets\Scripts\SaveLoad\Saveable.cs" />
+     <Compile Include="assets\Scripts\SaveLoad\SavedData.cs" />
+     <Compile Include="assets\ThirdParty\Spooky Woods\Example\Scripts\BackgroundParallax.cs" />
+     <Compile Include="assets\ThirdParty\TinyBackground2D\Scripts\Move.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/Igor/Documents/PET/PetMitos/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

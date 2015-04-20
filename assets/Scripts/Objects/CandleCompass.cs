@@ -25,7 +25,7 @@ public class CandleCompass : MonoBehaviour {
 	//
 	void OnTriggerEnter2D(Collider2D other){
 
-		if(gameObject.renderer.enabled)
+		if(gameObject.GetComponent<Renderer>().enabled)
 			return;
 
 		Debug.Log("Jogador: " + playerPosition);
@@ -66,7 +66,7 @@ public class CandleCompass : MonoBehaviour {
 		Debug.Log("Angulo: " + angle);
 		Debug.Log("Olho: " + targetEye.name);
 
-		gameObject.renderer.enabled = true;
+		gameObject.GetComponent<Renderer>().enabled = true;
 		gameObject.transform.Rotate(0, 0, angle, Space.World);
 	}
 }

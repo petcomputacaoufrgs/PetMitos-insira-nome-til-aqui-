@@ -5,6 +5,8 @@ Project("{7C9F7901-A78D-5184-9A42-8DCB48449B80}") = "PetMitosUFRGS", "Assembly-C
 EndProject
 Project("{7C9F7901-A78D-5184-9A42-8DCB48449B80}") = "PetMitosUFRGS", "Assembly-CSharp-vs.csproj", "{4BC0BA14-07E3-8E9B-2EC0-B3E7130ED558}"
 EndProject
+Project("{7C9F7901-A78D-5184-9A42-8DCB48449B80}") = "PetMitosUFRGS", "Assembly-CSharp-Editor-vs.csproj", "{AEA4FC29-D443-9AE5-8996-C51BAF29CE0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{4BC0BA14-07E3-8E9B-2EC0-B3E7130ED558}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BC0BA14-07E3-8E9B-2EC0-B3E7130ED558}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BC0BA14-07E3-8E9B-2EC0-B3E7130ED558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA4FC29-D443-9AE5-8996-C51BAF29CE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA4FC29-D443-9AE5-8996-C51BAF29CE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA4FC29-D443-9AE5-8996-C51BAF29CE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA4FC29-D443-9AE5-8996-C51BAF29CE0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																						GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

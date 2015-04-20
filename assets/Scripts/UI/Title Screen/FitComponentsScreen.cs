@@ -55,10 +55,22 @@ public class FitComponentsScreen : MonoBehaviour {
 
 		if (GUI.Button(btRect, btnTexture)){
 
+			CheckPlayerData localPlayer = new CheckPlayerData();
 
-			DBAccess db = new DBAccess();
+			bool foundPlayer = localPlayer.CheckForLocalPlayer();
 
-			db.Connect();
+			if(!foundPlayer){
+
+				Debug.Log("Nenhum registro encontrado...");
+				Debug.Log("Registrando novo usuario...");
+
+			}
+
+			Application.LoadLevel("Scene - Level 01 - South");
+
+			//LocalDBAccess db = new LocalDBAccess();
+
+			//db.OpenConnection();
 
 			/*SqliteDatabase sqlDB = new SqliteDatabase("local-DB-folclorica-01.sqlite3"); 
 			DataTable table = sqlDB.ExecuteQuery("SELECT * FROM USUARIO");
@@ -69,6 +81,7 @@ public class FitComponentsScreen : MonoBehaviour {
 
 			//Application.LoadLevel("Level 01 - South");
 			//Debug.Log("Clicked the button with an image");
+
 
 		}
 		/*if(GUI.Button(btStartImg, "MUAHAHHAHAHHA")){

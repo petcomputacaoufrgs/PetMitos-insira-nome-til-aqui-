@@ -1,0 +1,13 @@
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\UnityEditor.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\UnityEngine.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\ZELDA\Documents\PetMitos-insira-nome-til-aqui-\obj\Debug\Assembly-CSharp-firstpass.pdb

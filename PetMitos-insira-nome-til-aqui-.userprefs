@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="assets\Scripts\Character\PlatformerCharacter2D.cs">
+    <Files>
+      <File FileName="assets\Scripts\Character\PlatformerCharacter2D.cs" Line="182" Column="59" />
+      <File FileName="assets\Scripts\Character\Platformer2DUserControl.cs" Line="1" Column="1" />
+      <File FileName="assets\Scripts\Character\Enemy.cs" Line="8" Column="3" />
+      <File FileName="assets\Scripts\Character\controlboi.cs" Line="109" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

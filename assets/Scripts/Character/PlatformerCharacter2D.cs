@@ -20,11 +20,14 @@ public class PlatformerCharacter2D : MonoBehaviour
 	bool onRope = false;			
 	public bool montaria = false;// Whether or not the player is grounded.
 
-	private int HP = 6;
+	private int MAXHP = 6;
+	private int NowHP = 6;
+
 	private float lasthittime= 0;
 	public float RepeatDamagePeriod;
 	public float damageforce;
 
+	public GameObject HeartTank;
 
 
 	Transform ceilingCheck;								// A position marking where to check for ceilings
@@ -39,6 +42,8 @@ public class PlatformerCharacter2D : MonoBehaviour
 		groundCheck = transform.Find("GroundCheck");
 		ceilingCheck = transform.Find("CeilingCheck");
 		anim = GetComponent<Animator>();
+
+		//HeartTank.GetComponent<Health>().StartingHeartTank(MAXHP);
 
 	}
 
@@ -178,13 +183,16 @@ public class PlatformerCharacter2D : MonoBehaviour
 	}
 
 	public void TakeDamage(int dano, Transform enemy ){
-		HP-=1;
+		NowHP-=dano;
 		GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
 		Vector3 hurtvector =  damageforce/2*(transform.position - enemy.transform.position) + Vector3.up*2*damageforce; 
 		GetComponent<Rigidbody2D>().AddForce(hurtvector);
+		HeartTank.GetComponent<Health>().HeartUpdate (NowHP ,dano );
 
 
-
+	}
+	public int ShowHP(){
+		return NowHP;
 	}
 
 

@@ -7,16 +7,18 @@ public class Saver : MonoBehaviour {
 
 	private SaveAssistant playerSaver;
 
-	void Awake () {
+	void Start () {
 		playerSaver = new SaveAssistant (player, "player");
 		playerSaver.LoadPosition (player);
-		if (Game.current == null)
-			Game.NewGame (Application.loadedLevelName, 3);
 	}
 
 	public void Save () {
 		Debug.Log ("Saving");
 		playerSaver.SetToSavePosition (player);
 		SaveLoad.Save ();
+	}
+
+	public void ReturnMenu () {
+		Application.LoadLevel ("Menu");
 	}
 }

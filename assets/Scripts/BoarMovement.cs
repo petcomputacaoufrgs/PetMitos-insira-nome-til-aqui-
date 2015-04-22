@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PorcoMovimentoTeste : MonoBehaviour {
+public class BoarMovement : MonoBehaviour {
+
+	/*
+	 * This is an example on using SaveAssistant
+	*/
 
 	public float range;
 	public GameObject player;
@@ -15,6 +19,7 @@ public class PorcoMovimentoTeste : MonoBehaviour {
 	void Start () {
 		savedData = new SaveAssistant(this.gameObject, this.gameObject.name + "." + this.GetType().Name);
 		savedData.LoadPosition (this.gameObject);
+
 		startingPosition = gameObject.transform.position.x;
 		directionLeft = true;
 		live = savedData.LoadValue<bool> ("live", true);

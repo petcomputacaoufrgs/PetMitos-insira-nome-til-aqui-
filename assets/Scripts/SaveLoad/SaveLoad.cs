@@ -7,27 +7,36 @@ using System;
 
 public static class SaveLoad {
 
-	/**
-	 * Saves the game
-	*/
+	/// <summary>
+	/// Saves the current game.
+	/// </summary>
 	public static void Save () {
 		if (SavedData.current == null)
 			SaveLoad.LoadSavedData ();
 
 		// First update the SavedData to the current time and date
 		SavedData.current.UpdateData ();
-		BinaryFormatter bf = new BinaryFormatter();
-		FileStream dataFile = File.Create (Application.persistentDataPath + "/savedGames.fd"); // FD stands for Folclorica Data
-		bf.Serialize (dataFile, SavedData.current);
-		dataFile.Close ();
+		UpdateSavedData ();
 
 		// Then save the current game
 		Debug.Log ("Saving " + Game.current.GetId () + ".fd");
+		BinaryFormatter bf = new BinaryFormatter();
 		FileStream gameFile = File.Create (Application.persistentDataPath + "/" + Game.current.GetId () + ".fd");
 		bf.Serialize (gameFile, Game.current);
 		gameFile.Close ();
 	}
 
+	private static void UpdateSavedData () {
+		BinaryFormatter bf = new BinaryFormatter();
+		FileStream dataFile = File.Create (Application.persistentDataPath + "/savedGames.fd"); // FD stands for Folclorica Data
+		bf.Serialize (dataFile, SavedData.current);
+		dataFile.Close ();
+	}
+
+	/// <summary>
+	/// Load the specified id into current game.
+	/// </summary>
+	/// <param name="id">Game id.</param>
 	public static void Load (int id) {
 		if (File.Exists (Application.persistentDataPath + "/" + id + ".fd")) {
 			Debug.Log ("Loading " + id + ".fd");
@@ -38,7 +47,9 @@ public static class SaveLoad {
 		}
 	}
 
-
+	/// <summary>
+	/// Loads the file containing information about all saved games, if it doesn't exist creates a new file.
+	/// </summary>
 	public static void LoadSavedData () {
 		if (File.Exists (Application.persistentDataPath + "/savedGames.fd")) {
 			BinaryFormatter bf = new BinaryFormatter();
@@ -52,6 +63,17 @@ public static class SaveLoad {
 			bf.Serialize (file, SavedData.current);
 			file.Close();
 		}
+	}
+
+	/// <summary>
+	/// Deletes the saved game .
+	/// </summary>
+	/// <param name="id">Identifier.</param>
+	public static void DeleteSavedData (int id) {
+		LoadSavedData ();
+		File.Delete (Application.persistentDataPath + "/" + id + ".fd");
+		SavedData.current.DeleteData (id);
+		UpdateSavedData ();
 	}
 
 	/**

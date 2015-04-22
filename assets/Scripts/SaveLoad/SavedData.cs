@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 [System.Serializable]
 public class SavedData {
@@ -17,23 +18,24 @@ public class SavedData {
 	};
 
 	private int currentId;	// The ID for the current saved game
-	private List<gameData> savedGames;	// The list of saved games
+	private Dictionary<int, gameData> savedGames;	// The list of saved games
 
 	public SavedData() {
 		currentId = -1;
-		savedGames = new List<gameData> ();
+		savedGames = new Dictionary<int, gameData> ();
 	}
 
-	/**
-	 * Return an id for the new game to be saved
-	*/
+	/// <summary>
+	/// Create an id for the new game to be saved.
+	/// </summary>
+	/// <returns>The id.</returns>
 	public int NewData () {
 		return ++currentId;
 	}
 
-	/**
-	 * Update the time of the saved game and it's level name.
-	*/
+	/// <summary>
+	/// Update the time of the saved game and it's level name.
+	/// </summary>
 	public void UpdateData () {
 		gameData currentData;
 		int id;
@@ -43,10 +45,25 @@ public class SavedData {
 		currentData.levelName = Game.current.GetLevelName ();
 		currentData.time = DateTime.Now;
 
-		savedGames.Insert (id, currentData);
+		if (savedGames.ContainsKey (id))
+			savedGames.Remove (id);
+		savedGames.Add (id, currentData);
 	}
 
+	/// <summary>
+	/// Gets a list of saved games.
+	/// </summary>
+	/// <returns>The games list.</returns>
 	public List<gameData> GetData () {
-		return new List<gameData> (savedGames);
+		if (savedGames.Count <= 0)
+			return new List<gameData> ();
+		else
+			return savedGames.Values.ToList ();
+	}
+
+	public void DeleteData (int id) {
+		if (savedGames.ContainsKey (id)) {
+			savedGames.Remove (id);
+		}
 	}
 }

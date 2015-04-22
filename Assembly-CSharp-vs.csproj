@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="assets\Scripts\BoarMovement.cs" />
      <Compile Include="assets\Scripts\Character\Platformer2DUserControl.cs" />
      <Compile Include="assets\Scripts\Character\PlatformerCharacter2D.cs" />
      <Compile Include="assets\Scripts\Character\controlboi.cs" />
@@ -54,7 +55,6 @@
      <Compile Include="assets\Scripts\Objects\BoitataSpinningBody.cs" />
      <Compile Include="assets\Scripts\Objects\DeadTreeTrigger.cs" />
      <Compile Include="assets\Scripts\Objects\Rope.cs" />
-     <Compile Include="assets\Scripts\PorcoMovimentoTeste.cs" />
      <Compile Include="assets\Scripts\SaveLoad\SaveAssistant.cs" />
      <Compile Include="assets\Scripts\SaveLoad\SaveLoad.cs" />
      <Compile Include="assets\Scripts\SaveLoad\SavedData.cs" />

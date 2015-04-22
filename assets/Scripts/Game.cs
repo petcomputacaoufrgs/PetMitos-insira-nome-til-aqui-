@@ -23,9 +23,11 @@ public class Game {
 		this.saveables = new Dictionary<string, Hashtable>();
 	}
 
-	/**
-	 * Creates a new game object and it's file
-	 */
+	/// <summary>
+	/// Creates a new game object and it's file.
+	/// </summary>
+	/// <param name="firstLevelName">First level name.</param>
+	/// <param name="lifeAmount">Life amount.</param>
 	public static void NewGame (string firstLevelName, int lifeAmount) {
 		SaveLoad.LoadSavedData ();
 		Game.current = new Game (SavedData.current.NewData (), firstLevelName, lifeAmount);
@@ -36,6 +38,26 @@ public class Game {
 		return id;
 	}
 
+	public int GetLifes () {
+		return lifes;
+	}
+
+	public void RemoveOneLife () {
+		this.lifes--;
+	}
+	
+	public void IncrementOneLife () {
+		this.lifes++;
+	}
+
+	public int GetPoint () {
+		return points;
+	}
+
+	public void AddPoints (int quantity) {
+		this.points += Mathf.Abs (quantity);
+	}
+
 	public string GetLevelName () {
 		return levelName;
 	}
@@ -44,9 +66,11 @@ public class Game {
 		Application.LoadLevel (this.levelName);
 	}
 
-	/**
-	 * Returns the list of saved components of the given object
-	 */
+	/// <summary>
+	/// Returns the list of saved components of the given object.
+	/// </summary>
+	/// <returns>The saved components.</returns>
+	/// <param name="savename">The object label.</param>
 	public Hashtable GetSavedValues (string savename) {
 		if (saveables.ContainsKey (savename)) {
 			return this.saveables[savename];
@@ -59,9 +83,11 @@ public class Game {
 		saveables[savename] = values;
 	}
 
-	/**
-	 * Return true if the object was saved, otherwise false
-	 */
+	/// <summary>
+	/// Return true if the object was saved, otherwise false.
+	/// </summary>
+	/// <returns><c>true</c>, if objected was saved, <c>false</c> otherwise.</returns>
+	/// <param name="savename">The object label.</param>
 	public bool ObjectSaved (string savename) {
 		if (this.saveables.ContainsKey (savename))
 			return true;

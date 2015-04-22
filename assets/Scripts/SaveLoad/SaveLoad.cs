@@ -17,28 +17,31 @@ public static class SaveLoad {
 		// First update the SavedData to the current time and date
 		SavedData.current.UpdateData ();
 		BinaryFormatter bf = new BinaryFormatter();
-		FileStream file = File.Create (Application.persistentDataPath + "/savedGames.fd"); // FD stands for Folclorica Data
-		bf.Serialize (file, SavedData.current);
-		file.Close ();
+		FileStream dataFile = File.Create (Application.persistentDataPath + "/savedGames.fd"); // FD stands for Folclorica Data
+		bf.Serialize (dataFile, SavedData.current);
+		dataFile.Close ();
 
 		// Then save the current game
-		file = File.Create (Application.persistentDataPath + "/" + Game.current.GetId () + ".fd");
-		bf.Serialize (file, Game.current);
+		Debug.Log ("Saving " + Game.current.GetId () + ".fd");
+		FileStream gameFile = File.Create (Application.persistentDataPath + "/" + Game.current.GetId () + ".fd");
+		bf.Serialize (gameFile, Game.current);
+		gameFile.Close ();
 	}
 
 	public static void Load (int id) {
 		if (File.Exists (Application.persistentDataPath + "/" + id + ".fd")) {
+			Debug.Log ("Loading " + id + ".fd");
 			BinaryFormatter bf = new BinaryFormatter();
-			FileStream file = File.Open (Application.persistentDataPath + "/savedGames.fd", FileMode.Open);
-			Game.current = (Game)bf.Deserialize(file);
-			file.Close();
-			Game.current.LoadScene ();
+			FileStream gameFile = File.Open (Application.persistentDataPath + "/" + id + ".fd", FileMode.Open);
+			Game.current = (Game)bf.Deserialize (gameFile);
+			gameFile.Close();
 		}
 	}
 
+
 	public static void LoadSavedData () {
 		if (File.Exists (Application.persistentDataPath + "/savedGames.fd")) {
-			BinaryFormatter bf = new BinaryFormatter ();
+			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open (Application.persistentDataPath + "/savedGames.fd", FileMode.Open);
 			SavedData.current = (SavedData)bf.Deserialize (file);
 			file.Close ();
@@ -51,8 +54,18 @@ public static class SaveLoad {
 		}
 	}
 
+	/**
+	 * DEBUG ONLY: WON'T BE IN THE FINAL VERSION
+	 */
 	public static void CleanSavedData () {
+		LoadSavedData ();
+		List<SavedData.gameData> data = SavedData.current.GetData ();
+		foreach (SavedData.gameData game in data) {
+			File.Delete (Application.persistentDataPath + "/" + game.id + ".fd");
+			Debug.Log ("File removed: " + Application.persistentDataPath + "/" + game.id + ".fd");
+		}
 		File.Delete (Application.persistentDataPath + "/savedGames.fd");
+		Debug.Log ("File removed: " + Application.persistentDataPath + "/savedGames.fd");
 	}
 
 }

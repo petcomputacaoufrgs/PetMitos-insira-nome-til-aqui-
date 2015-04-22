@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class SavedData {
@@ -8,18 +9,19 @@ public class SavedData {
 	public static SavedData current;
 
 	// Struct for the data of the saved games
-	private struct gameData {
+	[System.Serializable]
+	public struct gameData {
 		public int id;
 		public string levelName;
 		public DateTime time;
 	};
 
 	private int currentId;	// The ID for the current saved game
-	private ArrayList savedGames;	// The list of saved games
+	private List<gameData> savedGames;	// The list of saved games
 
 	public SavedData() {
 		currentId = -1;
-		savedGames = new ArrayList ();
+		savedGames = new List<gameData> ();
 	}
 
 	/**
@@ -42,5 +44,9 @@ public class SavedData {
 		currentData.time = DateTime.Now;
 
 		savedGames.Insert (id, currentData);
+	}
+
+	public List<gameData> GetData () {
+		return new List<gameData> (savedGames);
 	}
 }

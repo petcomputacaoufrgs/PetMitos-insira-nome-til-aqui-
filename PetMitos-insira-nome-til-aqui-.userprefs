@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="assets\Scripts\UI\Health.cs">
     <Files>
-      <File FileName="assets\Scripts\UI\Health.cs" Line="56" Column="6" />
-      <File FileName="assets\Scripts\Character\PlatformerCharacter2D.cs" Line="187" Column="12" />
+      <File FileName="assets\Scripts\UI\Health.cs" Line="31" Column="22" />
+      <File FileName="assets\Scripts\Character\PlatformerCharacter2D.cs" Line="189" Column="6" />
       <File FileName="assets\Scripts\Character\Platformer2DUserControl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

@@ -160,8 +160,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 		if(collision.gameObject.tag =="ENEMY"){
 			if(Time.time > lasthittime + RepeatDamagePeriod){
 				//if(HP>0){
+					lasthittime = Time.time;
 					TakeDamage(1,collision.transform);
-					lasthittime =Time.time;
+				//Debug.Log (NowHP);
 				//}
 			
 			}
@@ -183,11 +184,13 @@ public class PlatformerCharacter2D : MonoBehaviour
 	}
 
 	public void TakeDamage(int dano, Transform enemy ){
-		NowHP-=dano;
-		GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
-		Vector3 hurtvector =  damageforce/2*(transform.position - enemy.transform.position) + Vector3.up*2*damageforce; 
+		NowHP-=1;
+
+		//9GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+		/*Vector3 hurtvector =  damageforce/2*(transform.position - enemy.transform.position) + Vector3.up*2*damageforce; 
 		GetComponent<Rigidbody2D>().AddForce(hurtvector);
-		HeartTank.GetComponent<Health>().HeartUpdate (NowHP ,dano );
+		Debug.Log ("Tomou Dano");*/
+		HeartTank.GetComponent<Health>().HeartUpdate (NowHP,true );
 
 
 	}
